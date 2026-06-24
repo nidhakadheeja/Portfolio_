@@ -1,0 +1,205 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nidha Kadheeja — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: linear-gradient(135deg,#f6d365 0%, #fda085 50%, #ffd1dc 100%);
+      --card: rgba(255,255,255,0.9);
+      --accent1: #6C63FF; /* indigo */
+      --accent2: #FF6B6B; /* coral */
+      --muted: #566074;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; min-height:100vh; background:var(--bg); color:#0f1724}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .avatar{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{margin-left:18px;text-decoration:none;color:rgba(15,23,36,0.9);font-weight:600}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:28px}
+    .card{background:var(--card);padding:22px;border-radius:18px;box-shadow:0 10px 30px rgba(12,15,25,0.08)}
+    h1{margin:0;font-size:clamp(28px,4vw,42px)}
+    p.lead{color:var(--muted);margin-top:10px}
+    .cta{margin-top:18px;display:flex;gap:10px}
+    .btn{padding:10px 16px;border-radius:12px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent1),#8b5cf6);color:white}
+    .btn-outline{background:transparent;border:2px solid rgba(12,15,25,0.06)}
+
+    /* skills */
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .skill{padding:8px 10px;border-radius:999px;background:var(--glass);font-weight:600}
+
+    /* projects grid */
+    .projects{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project-card{border-radius:12px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,0.85),rgba(255,255,255,0.75));padding:14px}
+    .project-hero{height:120px;border-radius:10px;background:linear-gradient(120deg,#e0e7ff,#ffd1dc);display:flex;align-items:end;padding:12px}
+    .project-title{font-weight:700;margin:8px 0}
+    .project-desc{color:var(--muted);font-size:14px}
+
+    /* sidebar */
+    .sidebar{position:relative}
+    .resume-card{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+    .socials{display:flex;gap:10px}
+    .socials a{background:var(--glass);padding:8px;border-radius:10px;text-decoration:none;font-weight:700}
+
+    /* contact */
+    footer{margin-top:36px;text-align:center;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .projects{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      .projects{grid-template-columns:1fr}
+      nav{display:none}
+      .avatar{width:48px;height:48px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="avatar">NK</div>
+        <div>
+          <div style="font-weight:700">Nidha Kadheeja</div>
+          <div style="font-size:13px;color:var(--muted)">B.Tech | Web Dev • Flask • Python • ML basics</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section class="card">
+        <h1>Hi, I’m Nidha — I build delightful web apps.</h1>
+        <p class="lead">Fourth-year IT student who loves building full-stack projects with Flask & MySQL. Passionate about clean UI, performance and real-world problem solving.</p>
+        <div class="skills" id="skills">
+          <div class="skill">Flask</div>
+          <div class="skill">Python</div>
+          <div class="skill">MySQL</div>
+          <div class="skill">HTML & CSS</div>
+          <div class="skill">JavaScript</div>
+          
+        </div>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-outline" href="https://drive.google.com/your-resume-link" target="_blank">Download Resume</a>
+        </div>
+
+        <div style="margin-top:18px;color:var(--muted);font-size:14px">Available for internships · Open to collaboration</div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="card resume-card">
+          <div style="font-weight:700">Quick Info</div>
+          <div style="color:var(--muted);font-size:14px">Location: India</div>
+          <div style="color:var(--muted);font-size:14px">Email: <a href="mailto:nidhakadheeja8089@gmail.com">nidhakadheeja8089@gmail.com</a></div>
+          <div class="socials" style="margin-top:8px">
+            <a href="http://linkedin.com/in/nidha-kadheeja" target="_blank">LinkedIn</a>
+            
+          </div>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card" style="padding:12px">
+          <div style="font-weight:700;margin-bottom:8px">Education</div>
+          <div style="color:var(--muted);font-size:14px">B.Tech — Information Technology</div>
+          <div style="color:var(--muted);font-size:13px">Expected Graduation: 2026</div>
+        </div>
+      </aside>
+    </main>
+
+    <section id="projects" style="margin-top:18px">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <h2 style="margin:0">Projects</h2>
+        <div style="color:var(--muted);font-size:14px">Selected works — click to view</div>
+      </div>
+
+      <div class="projects">
+
+        <article class="project-card">
+          <div class="project-hero"> <div style="font-weight:700">NearbyNow</div></div>
+          <div class="project-title">NearbyNow — Local marketplace</div>
+          <div class="project-desc">Full-stack Flask app connecting local businesses & customers. Features: user roles (seller, buyer, admin), Cloudinary image uploads, cart, wishlist.</div>
+          <div style="margin-top:12px;display:flex;gap:8px">
+           
+          </div>
+        </article>
+
+       
+
+     
+
+      </div>
+    </section>
+
+    <section style="margin-top:28px">
+      <h2 style="margin:0 0 8px 0">Skills & Tools</h2>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <div class="card" style="padding:10px">Flask</div>
+        <div class="card" style="padding:10px">Python</div>
+        <div class="card" style="padding:10px">MySQL</div>
+        <div class="card" style="padding:10px">HTML & CSS</div>
+        <div class="card" style="padding:10px">JavaScript</div>
+        <div class="card" style="padding:10px">Cloudinary</div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <h2>Contact</h2>
+      <div class="card" style="margin-top:10px;padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div>
+          <div style="font-weight:700">Email</div>
+          <div style="color:var(--muted);margin-top:6px"><a href="mailto:nidhakadheeja8089.com">nidhakadheeja8089.com</a></div>
+
+          <div style="height:12px"></div>
+          <div style="font-weight:700">Resume</div>
+          <div style="color:var(--muted);margin-top:6px"><a href="https://drive.google.com/file/d/1xVKGfgEuktprqwhRpOVJGdIu9tU0FBY_/view?usp=drive_link" target="_blank">Download PDF</a></div>
+        </div>
+
+        <div>
+          <form onsubmit="alert('Thanks! Replace with real form handler or link to email.');return false;">
+            <label style="font-weight:700">Send a message</label>
+            <div style="margin-top:8px"><input placeholder="Your name" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #e6e9ef"></div>
+            <div style="margin-top:8px"><input placeholder="Your email" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #e6e9ef"></div>
+            <div style="margin-top:8px"><textarea placeholder="Message" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #e6e9ef;min-height:100px"></textarea></div>
+            <div style="margin-top:8px;text-align:right"><button class="btn btn-primary">Send</button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p style="margin-top:18px"> Nidha Kadheeja — <span style="color:var(--muted)">2025</span></p>
+    </footer>
+  </div>
+
+  <script>
+    // Small friendly script: keyboard shortcut to download resume (press 'r')
+    document.addEventListener('keydown', e =>{
+      if(e.key.toLowerCase() === 'r'){
+        window.open('https://drive.google.com/file/d/1xVKGfgEuktprqwhRpOVJGdIu9tU0FBY_/view?usp=drive_link', '_blank');
+      }
+    });
+  </script>
+</body>
+</html>
